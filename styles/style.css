@@ -1,0 +1,215 @@
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+
+/* common style     */
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* reusable css style */
+.container{
+    max-width: 1180px;
+    margin: auto;
+}
+.btn-primary{
+    background-color: brown;
+    font-size: 1.3rem;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    color: aliceblue;
+}
+.btn-secondary{
+    background-color: aliceblue;
+    padding: 5px 15px;
+    border: 2px solid black;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+
+
+
+/* banner section style */
+.banner{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    color: white;
+    border-radius: 20px;
+    margin: 40px auto;
+}
+.banner-content{
+    padding: 20px;
+    max-width: 50%;
+}
+.banner-title{
+    font-size: 5rem;
+    font-weight: 700;
+    color: rgb(255, 177, 9);
+    line-height: 70px;
+}
+.banner-description{
+    font-size: 1.5rem;
+    color: white;
+    line-height: 30px;
+    margin: 10px 0px ;
+    max-width: 500px;
+    /* border: 2px solid red; */
+}
+.banner-img{
+    max-width: 50%;
+}
+.banner-img img{
+    display: block;
+    max-width: 100%;
+}
+
+
+/* match card style */
+.matches{
+  display: flex;
+  gap: 20px;
+  
+
+}
+.matches-option{
+    background-color: black;
+    max-width: 25%;
+    max-height: fit-content;
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   border-radius: 20px;
+    gap: 40px;
+
+}
+.matches-option .btn-primary:nth-last-child(3),  .matches-option .btn-primary:nth-last-child(2){
+    background-color: aliceblue;
+    color: black;
+}
+.upcoming-matches{
+    /* border: 2px solid yellow; */
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+.match-card{
+    max-width: 300px;
+    border: 2px solid rgb(245, 237, 237);
+    box-shadow: 1px 1px 10px;
+    border-radius: 12px;
+    padding: 10px;
+    
+}
+.match-img{
+    max-width: 100%;
+    border-radius: 10px;
+}
+.card-description{
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.time{
+    display: flex;
+    justify-content: space-evenly;
+    /* gap: 40px; */
+}
+.time p{
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+
+
+
+
+
+/* Responsive media query */
+/* for mobile device first */
+@media screen and (max-width:576px) {
+    .banner{
+        flex-direction: column;
+        margin: 0px;
+        border-radius: 0%;
+    }
+    .banner-content{
+        max-width: 100%;
+    }
+    .banner-title{
+        font-size: 3rem;
+    }
+    .banner-description{
+        max-width: 100%;
+    }
+    .banner-img{
+    max-width: 100%;
+}
+/* match section responsive  */
+.matches{
+    flex-direction: column;
+}
+.matches-option{
+    max-width: 100%;
+    background-color: transparent;
+}
+.upcoming-matches{
+    grid-template-columns: 1fr;
+    /* max-width: 100%; */
+}
+.match-card{
+    max-width: 100%;
+}
+
+
+
+}
+
+
+/* for medium device */
+@media screen and (min-width:576px) and (max-width:772px) {
+    .banner-title{
+        font-size: 2rem;
+    }
+     .banner-description{
+        font-size: 1.1rem;
+     }
+     /* match section  */
+     .matches{
+    flex-direction: column;
+}
+.matches-option{
+    flex-direction: row;
+    max-width: 100%;
+    background: transparent;
+}
+.matches-option *{
+    flex: 1;
+}
+.upcoming-matches{
+    grid-template-columns:repeat(2,1fr);
+    place-items: center;
+}
+
+    
+}
