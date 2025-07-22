@@ -8,11 +8,40 @@
     "wdth" 100;
 }
 
+/* animation style */
+@keyframes banner-animation {
+    0%{
+        opacity: 0.2;
+        transform: translatex(-20px);
+    }
+    50%{
+        opacity: 0.5;
+         transform: translatex(-10px);
+         box-shadow: 1px 1px 10px red;
+    }
+    100%{
+        opacity: 1;
+         transform: translatex(0px);
+    }
+
+}
+@keyframes banner-img{
+    0%{
+        opacity: 0.4;
+         transform: translatex(-20px);
+    }
+    50%{
+        opacity: 0.8;
+         transform: translatex(-10px);
+    }
+    100%{
+        opacity: 1;
+          transform: translatex(0px);
+    }
+}
 
 
 /* common style     */
-
-
 
 *{
     padding: 0;
@@ -20,6 +49,9 @@
     box-sizing: border-box;
 }
 
+img{
+    max-width: 100%;
+}
 
 
 /* reusable css style */
@@ -54,10 +86,11 @@
     color: white;
     border-radius: 20px;
     margin: 40px auto;
+    animation: banner-animation 2s ease-out forwards;
 }
 .banner-content{
     padding: 20px;
-    max-width: 50%;
+    flex: 1;
 }
 .banner-title{
     font-size: 5rem;
@@ -74,11 +107,15 @@
     /* border: 2px solid red; */
 }
 .banner-img{
-    max-width: 50%;
+    /* max-width: 50%; */
+    flex: 1;
+   
+
 }
 .banner-img img{
     display: block;
     max-width: 100%;
+     animation: banner-img 1s ease-in-out infinite;
 }
 
 
@@ -121,7 +158,8 @@
 }
 .match-img{
     max-width: 100%;
-    border-radius: 10px;
+    /* max-height: 200px; */
+    border-radius: 10px 10px 0px 0px;
 }
 .card-description{
     font-size: 1.2rem;
@@ -152,6 +190,7 @@
         flex-direction: column;
         margin: 0px;
         border-radius: 0%;
+        text-align: center;
     }
     .banner-content{
         max-width: 100%;
@@ -180,6 +219,9 @@
 .match-card{
     max-width: 100%;
 }
+/* .match-card img{
+    max-width: 100%;
+} */
 
 
 
@@ -203,7 +245,7 @@
     max-width: 100%;
     background: transparent;
 }
-.matches-option *{
+.matches-option > *{
     flex: 1;
 }
 .upcoming-matches{
